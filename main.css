@@ -1,0 +1,43 @@
+@import 'https://fonts.googleapis.com/css?family=Oswald';
+fieldset{
+  padding: .5em;
+}
+main{
+  border: 1px solid black;
+  padding:.75em;
+  background-color: white;
+  margin: 1em;
+}
+body{
+  background-color: gray;
+  border: 2px solid white;
+  width:100%;
+  font-family: 'Oswald', sans-serif;
+}
+
+footer{
+  border-top: 2px solid white;
+  padding:1em;
+  color:#D22030;
+  width: inherit;
+}
+#button{
+  width: 7em;
+  box-shadow: 2px 2px 0 #D22030;
+  background-color: #a9aba9;
+  border-radius:2px;
+  font-weight:bold;
+  font-family: 'Oswald', sans-serif;
+}
+
+@media (width: 329px) and (max-width: 330){
+  body{
+    display: block;
+    width: 100%;
+  }
+  main{
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
