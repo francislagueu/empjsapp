@@ -1,4 +1,4 @@
-<?php //sesssion_start(); ?>
+
 <!doctype html>
 <html>
     <head>
@@ -80,8 +80,6 @@ $_SESSION['employees'][] = json_decode($emp, true);
     echo '<span>'.count($_SESSION['employees']).'</span>';
     echo '</div>';
 }
-//session_destroy();
-//$_SESSION['employees'] = [];
 ?>
         </main>
         <footer>Copyright Francis Lagueu &copy; <?php echo date('Y')?></footer>
