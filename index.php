@@ -4,7 +4,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <title></title>
+        <meta name="author" content="Francis Lagueu Fogang">
+        <title>Employee Add App</title>
+        <link rel="stylesheet" href="main.css">
     </head>
     <body>
         <main>
@@ -24,6 +26,7 @@
                         <option value="Engineering" >Engineering</option>
                         <option value="Accounting" >Accounting</option>
                         <option value="Marketing">Marketing</option>
+                        <option value="Sales">Sales</option>
                     </select><br>
                     <button type="submit" value="submit">
                         Submit &rarr;
@@ -33,15 +36,7 @@
             </div>
 <?php
 session_start();
- //global $employees;
 
-/*class Employee{
-    public $first_name;
-    public $last_name;
-    public $department;
-    public $employeeID;
-    public $hiredDate;
-}*/
    
 if($_SERVER['REQUEST_METHOD']=="POST"){
     
@@ -89,5 +84,6 @@ $_SESSION['employees'][] = json_decode($emp, true);
 //$_SESSION['employees'] = [];
 ?>
         </main>
+        <footer>Copyright Francis Lagueu &copy; <?php echo date('Y')?></footer>
     </body>
 </html>
