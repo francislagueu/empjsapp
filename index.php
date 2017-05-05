@@ -13,7 +13,7 @@
             <div>
                 <fieldset>
                     <legend>
-                        Add an Employee
+                        <h2>Add an Employee</h2>
                     </legend>
                     <form action="" method="POST">
                     <label for="first_name">First Name</label><br>
