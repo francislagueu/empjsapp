@@ -17,19 +17,19 @@
                     </legend>
                     <form action="" method="POST">
                     <label for="first_name">First Name</label><br>
-                    <input type="text" name="first_name" id="first_name" cols="15" required><br>
+                    <input type="text" name="first_name" id="first_name" cols="30" required><br>
                     <label for="last_name">Last Name</label><br>
-                    <input type="text" name="last_name" id="last_name" cols="15" required><br>
+                    <input type="text" name="last_name" id="last_name" cols="30" required><br>
                     <label for="department">Department</label><br>
-                    <select name="department" id="department" cols="15" required >
+                    <select name="department" id="department" cols="30" required >
                         <option value=""></option>
                         <option value="Engineering" >Engineering</option>
                         <option value="Accounting" >Accounting</option>
                         <option value="Marketing">Marketing</option>
                         <option value="Sales">Sales</option>
                     </select><br>
-                    <button type="submit" value="submit">
-                        Submit &rarr;
+                    <button type="submit" value="submit" id="button">
+                        Add &rarr;
                     </button>
                    </form>
                 </fieldset>
@@ -61,22 +61,22 @@ $emp = json_encode($employee);
  }
   
 $_SESSION['employees'][] = json_decode($emp, true);
-    
-    echo '<div>';
+    echo '<hr>';
+    echo '<div id = "output">';
     echo '<h1>Employee Added</h1>';
-    echo '<label>Name:</label>';
+    echo '<label>Name: </label>';
     echo '<span>'.$employee['first_name'].', '.$employee['last_name'].'</span>';
     echo '<br>';
-    echo '<label>Department:</label>';
+    echo '<label>Department: </label>';
     echo '<span>'.$employee['department'].'</span>';
     echo '<br>';
-    echo '<label>Employee ID:</label>';
+    echo '<label>Employee ID: </label>';
     echo '<span>'.$employee['employeeID'].'</span>';
     echo '<br>';
-    echo '<label>Hire Date:</label>';
+    echo '<label>Hire Date: </label>';
     echo '<span>'.$employee['hiredDate'].'</span>';
     echo '<br>';
-    echo '<label>Total Employees:</label>';
+    echo '<label>Total Employees: </label>';
     echo '<span>'.count($_SESSION['employees']).'</span>';
     echo '</div>';
 }

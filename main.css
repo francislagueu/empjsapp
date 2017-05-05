@@ -41,3 +41,20 @@ footer{
     height: 100%;
   }
 }
+#output{
+    background: darkgray;
+    color: black;
+    font-weight: bold;
+    border: 2px solid #D22030;
+}
+
+#output h1{
+    text-decoration: underline;
+}
+legend{
+    color:#D22030;
+}
+#output span{
+    text-decoration: underline;
+    color: #D22030;
+}
