@@ -44,17 +44,7 @@ session_start();
 }*/
    
 if($_SERVER['REQUEST_METHOD']=="POST"){
-    /*$employee = new Employee();
-    $employee->first_name = $_POST['first_name'];
-    $employee->last_name = $_POST['last_name'];
-    $employee->department = $_POST['department'];
-    $employee->employeeID = mt_rand(10000000, 99999999);
-    $n = mt_rand(10000000, 99999999);
-    $int= mt_rand(10000000,1262055681);
-    $employee->hiredDate = date("D M d, Y",$int);
-    $employees[] = $employee; */
     
-//$_SESSION['employees'];
 $employee=array();
 $first_name = $_POST['first_name'];
 $last_name = $_POST['last_name'];
@@ -67,7 +57,6 @@ $employee['last_name']=$last_name;
 $employee['department']=$department;
 $employee['employeeID']=$employeeID;
 $employee['hiredDate']=$hiredDate;
-//$_SESSION['employees']= json_encode($employee);
 $emp = json_encode($employee);
 
  if(array_key_exists($employee['employeeID'],$_SESSION['employees'])){
@@ -77,8 +66,6 @@ $emp = json_encode($employee);
  }
   
 $_SESSION['employees'][] = json_decode($emp, true);
-
-var_dump(json_encode($_SESSION['employees']), JSON_PRETTY_PRINT);
     
     echo '<div>';
     echo '<h1>Employee Added</h1>';
